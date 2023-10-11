@@ -9,12 +9,12 @@ const btnsOpenModal = document.querySelectorAll('.show-modal');
 const openModal = function() {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
-}
+};
 //close modal window and overlay
-const closeModal = function(){
+const closeModal = function() {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
-}
+};
 //add event for all buttons to trigger popup
 for (let i = 0; i < btnsOpenModal.length; i++) {
   btnsOpenModal[i].addEventListener('click', openModal);
@@ -23,9 +23,8 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 //ESC keypress to close window
-document.addEventListener('keydown', function(e){
-  if(e.key === "Escape" && !modal.classList.contains('hidden')){
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
     closeModal();
   }
-})
-
+});
